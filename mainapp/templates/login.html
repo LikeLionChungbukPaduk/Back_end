@@ -1,0 +1,21 @@
+{% extends 'overlap.html' %}
+
+{% block content %}
+
+<form id="login" action="{% url 'login' %}" method="POST">{% csrf_token %}
+    
+    <div class="title">LOGIN</div>
+    <div class="idpw">
+        <input class="input-box" type="text" name="user_id" placeholder="아이디"><br/>
+        <input class="input-box" type="password" name="user_pw" placeholder="비밀번호"><br/>
+    </div>
+    
+    <input id="button" type="submit" name="submit" value="로그인">
+    
+    <div class="signup">
+        <span>회원이 아닌가요?</span>
+        <a href="!#">회원가입</p>
+    </div>
+    
+</form>
+{% endblock %}
